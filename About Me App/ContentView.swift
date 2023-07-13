@@ -8,12 +8,35 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
+    
+    @State private var factOne = ""
+    @State private var factTwo = ""
+    
+        var body: some View {
+      
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Text("Isabelle!! 🔥")
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .foregroundColor(Color.pink)
+            Image("littleMe")
+                .resizable(resizingMode: .stretch)
+                .aspectRatio(contentMode: .fit)
+        
+            
+            Button("facts") {
+                factOne = "I really love cats 🐈‍⬛"
+                factTwo = "I like to draw."
+            }
+            .font(.title3)
+            .buttonStyle(.borderedProminent)
+            .tint(.pink)
+            
+            Text(factOne)
+                .font(.title3)
+            Text(factTwo)
+                .font(.title3)
+            
         }
         .padding()
     }
